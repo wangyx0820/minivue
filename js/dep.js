@@ -1,5 +1,5 @@
 /*
-    Dep:Dependency
+    Dep:Dependency -- 依赖管理器
     1.收集依赖，添加观察者（watcher）
     2.通知所有观察者
 */

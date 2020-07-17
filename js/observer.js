@@ -24,7 +24,7 @@ class Observer {
 
         // 负责收集依赖并发送通知
         let dep = new Dep()
-        
+
         // 如果val是对象，把val内部的属性转化成响应式数据（比如person下的name属性）
         this.walk(val)
 
@@ -32,7 +32,7 @@ class Observer {
             enumberable:true,
             configurable:true,
             get () {
-                // 收集依赖
+                // 收集依赖:谁依赖了这个数据，就把谁放入依赖数组中
                 Dep.target && dep.addSub(Dep.target)
                 return val
             },
